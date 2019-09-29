@@ -1,30 +1,28 @@
-class Artist 
+class Artist
   attr_accessor :name
-  
+
   @@all = []
-  
+
   def initialize(name)
-    @name = name
-    @@all << self 
-  end 
-  
-  def self.all 
-    @@all
-  end 
-  
-  def song 
+    self.name = name
+    @@all << self
+  end
+
+  def songs
     Song.all.select do |song|
-      song.artist == self 
-    end 
-  end 
-  
+      song.artist == self
+    end
+  end
+
   def add_song(song)
-    #song= Song.new(song_instance)
-    song.artist = self 
-  end 
-  
-  
- def self.find_or_create_by_name(name)
+    song.artist = self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.find_or_create_by_name(name)
     # find
     result = Artist.all.find do |artist|
       artist.name == name
@@ -37,19 +35,9 @@ class Artist
 
     result
   end
-  
-  
-    def self.print_songs
-     self.songs.map {|song| song.name}
-    end 
-  
-end 
 
+  def print_songs
+    puts self.songs.map { |song| song.name }
+  end
 
-
-
-
-
-
-
-
+end
