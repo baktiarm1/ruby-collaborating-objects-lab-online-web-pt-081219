@@ -14,15 +14,12 @@ class Song
   
   def new_by_filename(fileName)
     songAndArtist = fileName.split(' - ')
-    
     song = Song.new(songAndArtist[0])
     song.artist = songAndArtist[1]
     
-    song
+  song
   end 
-  end 
-  
-  
+
   
 
 end 
