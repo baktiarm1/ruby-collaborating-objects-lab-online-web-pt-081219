@@ -14,9 +14,9 @@ def files
     files
   end
   
-  def import 
-    Song.new_by_filename(fileName)
-  end 
+def import
+    self.files.each { |file| Song.new_by_filename(file) }
+  end
   
   
 end 
