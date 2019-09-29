@@ -1,4 +1,5 @@
 class MP3Imporoter 
+  attr_reader :path
   
   def initialize(path )
     @path = path 
