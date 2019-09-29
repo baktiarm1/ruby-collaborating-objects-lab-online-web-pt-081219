@@ -12,6 +12,9 @@ class Artist
     @@all
   end 
   
+  def song 
+    
+  
   def add_song(song_instance)
     song= Song.new(song_instance)
     song.artist = self 
