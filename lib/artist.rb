@@ -18,8 +18,8 @@ class Artist
     end 
   end 
   
-  def add_song(song_instance)
-    song= Song.new(song_instance)
+  def add_song(song)
+    #song= Song.new(song_instance)
     song.artist = self 
   end 
   
