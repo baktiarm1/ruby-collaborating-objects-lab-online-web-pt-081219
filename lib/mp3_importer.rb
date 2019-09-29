@@ -1,5 +1,10 @@
 class MP3Imporoter 
   
+  def initialize(path )
+    @path = path 
+  end 
+  
+  
   def files 
   end 
   
