@@ -12,13 +12,13 @@ class Song
     @@all.map { |artist| all.Song.artist}
   end 
   
-  def new_by_filename(fileName)
-    songAndArtist = fileName.split(' - ')
-    song = Song.new(songAndArtist[0])
-    song.artist = songAndArtist[1]
+  # def new_by_filename(fileName)
+  #   songAndArtist = fileName.split(' - ')
+  #   song = Song.new(songAndArtist[0])
+  #   song.artist = songAndArtist[1]
     
-  song
-  end 
+  # song
+  # end 
 
   
 
