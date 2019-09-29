@@ -32,8 +32,8 @@ class Artist
        Artist.new(name)
      end 
   end 
-    def print_songs
-      print all songs associated with artist song_instance
+    def self.print_songs
+     Song.all.
     end 
   
 end 
