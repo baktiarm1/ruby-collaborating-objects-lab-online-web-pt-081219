@@ -28,7 +28,7 @@ class Artist
     if self.name == name ? self.name :
       name = Artist.new(name)
     end 
-    
+  end 
     def print_songs
       print all songs associated with artist song_instance
     end 
