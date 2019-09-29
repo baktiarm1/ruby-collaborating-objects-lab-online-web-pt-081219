@@ -28,6 +28,7 @@ class Artist
      if Artist.all.select do |artist|
        artist.name == name 
        artist 
+     end 
      else 
        Artist.new(name)
      end 
