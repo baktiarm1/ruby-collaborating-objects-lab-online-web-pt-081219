@@ -13,7 +13,7 @@ class Artist
   end 
   
   def song 
-    
+    song.all
   
   def add_song(song_instance)
     song= Song.new(song_instance)
