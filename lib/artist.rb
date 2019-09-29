@@ -24,15 +24,21 @@ class Artist
   end 
   
   
-  def self.find_or_create_by_name(name)
-     if Artist.all.select do |artist|
-       artist.name == name 
-       artist 
-     end 
-     else 
-       Artist.new(name)
-     end 
-  end 
+ def self.find_or_create_by_name(name)
+    # find
+    result = Artist.all.find do |artist|
+      artist.name == name
+    end
+
+    # create
+    if !result
+      result = Artist.new(name)
+    end
+
+    result
+  end
+  
+  
     def self.print_songs
      self.songs.map {|song| song.name}
     end 
