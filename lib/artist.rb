@@ -25,9 +25,12 @@ class Artist
   
   
   def self.find_or_create_by_name(name)
-     self.name == name ? self.name :
-       name = Artist.new(name)
-    name 
+     if Artist.all.select do |artist|
+       artist == name 
+       artist 
+     else 
+       Artist.new(name)
+     end 
   end 
     def print_songs
       print all songs associated with artist song_instance
