@@ -9,7 +9,7 @@ class Song
   end 
   
   def self.all 
-    @@all.map { |artist| all.Song.artist}
+    @@all
   end 
   
   # def new_by_filename(fileName)
